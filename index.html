@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <p>*Inheritance And prototype*</p>
+    <h3>Q1.Create 2 objects - parent and child. Attach methods to parent and use those methods in child object using
+        parents prototype.</h3>
+    <pre>
+        let arr=[1,2,3,4,5];
+        let obj={
+            name:"Riya"
+        }
+        let obj2={
+            name:"Mayank",
+            proto:obj
+        }
+        console.log(obj2);
+    </pre>
+    <hr>
+    <h3>Q2.Write code to explain prototype chaining.</h3>
+    <pre>
+        const parent = {
+            parentProp: 'computer Science'
+          };
+         
+          const childs = Object.create(parent);
+          childs.childProp = 'Biology';
+          
+          console.log(childs.childProp);
+          console.log(childs.parentProp); 
+        
+    </pre>
+    <hr>
+    <h3>Q3.Add a method to calculate sum of all elements in Array in array's protype, use that method to calculate sum
+        for multiple arrays.</h3>
+    <pre>
+        let array=[1,4,5,2,9];
+        let sum=0;
+        for(let i=0;i< array.length;i++){
+           sum+=array[i];
+        }
+        let child={
+           proto:array
+        }
+        console.log(sum);
+    </pre>
+    <b>Output-21</b>
+    <hr>
+    <h3>Q4.Write a JavaScript function to retrieve all the names of object's own and inherited properties.</h3>
+    <pre>
+        let A=[100,200,300,400,500]
+        let res = A.reduce((acc,curr)=>{
+        acc+=curr
+        return acc
+        },0)
+         console.log(res);
+    </pre>
+    <b>Output-1500</b>
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
